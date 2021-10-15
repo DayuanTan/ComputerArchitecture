@@ -40,3 +40,4 @@ In optimizing for performance, distinguish between what must be done in series v
 
 4) You may use lookup tables (LUTs) / decoders, but these are limited to 32 elements each (i.e., address pointer width up to 5 bits). We do not allow something like a 512-element LUT with 32-bit outputs which simply maps your restricted 9-bit machine code field to a 32-bit clone of ARM or MIPS instructions. (It was "cute" the first time a team did this.)
 
+
