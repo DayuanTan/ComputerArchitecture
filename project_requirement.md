@@ -6,7 +6,7 @@
 - Design the instruction set and overall architecture for your own special-purpose reduced instruction set (RISC) processor.
 - Design the hardware for your processor core.
 
-## 1.1 9-Bit Instruction Set Architecture
+## 9-Bit Instruction Set Architecture
 
 Your processor shall have 9-bit instructions (machine code) and shall be optimized for three simple programs, described below. For this lab, you shall design the instruction set and instruction formats and code three programs to run on your instruction set. Given the tight limit on instruction bits, you need to consider the target programs and their needs carefully. The best design will come from an iterative process of designing an ISA, then coding the programs, redesigning the ISA, etc.
 
@@ -23,9 +23,20 @@ For this to fit in a 9-bit field, the memory demands of these programs will have
 
 You shall write and run three programs on your ISA. You may assume that the first starts at address 0, and the other two are found in memory after the end of the first program (at some nonoverlapping address of your choosing). The specification of your branch instructions may depend on where your programs reside in memory, so you should make sure they still work if the starting address changes a little (e.g., if you have to rewrite one of the programs and it causes the others to also shift). This approach will allow you to put all three programs in the same instruction memory later on in the quarter.
 
-Constraints: You shall assume a single-address data memory (Verilog design provided). You shall also assume a register file (or whatever internal storage you support) that can write to only one register per instruction. You may also have a single ALU condition/flag register (e.g., carry out, or shift out, sign result, zero bit, etc., like ARM's Z, N, C, and V status bits) that can be written at the same time as an 8-bit register, if you want. You may read more than one register per cycle. Please restrict register file depth to no more than 16 registers. Also, manual loop unrolling of your code is not allowed.
+### Constraints: 
+You shall assume a single-address data memory (Verilog design provided). You shall also assume a register file (or whatever internal storage you support) that can write to only one register per instruction. You may also have a single ALU condition/flag register (e.g., carry out, or shift out, sign result, zero bit, etc., like ARM's Z, N, C, and V status bits) that can be written at the same time as an 8-bit register, if you want. You may read more than one register per cycle. Please restrict register file depth to no more than 16 registers. Also, manual loop unrolling of your code is not allowed.
 
-Suggestions: In optimizing for performance, distinguish between what must be done in series vs. what can be done in parallel. An instruction that does an add and a subtract (but neither depends on the output of the other) takes no longer than a simple add instruction. Similarly, a branch instruction where the branch condition or target depends on a memory operation will make things more difficult later on. NOTE: In a single-cycle operation, this may not be an issue, but it would be in a pipelined processor.
+### Suggestions: 
+In optimizing for performance, distinguish between what must be done in series vs. what can be done in parallel. An instruction that does an add and a subtract (but neither depends on the output of the other) takes no longer than a simple add instruction. Similarly, a branch instruction where the branch condition or target depends on a memory operation will make things more difficult later on. NOTE: In a single-cycle operation, this may not be an issue, but it would be in a pipelined processor.
 
  
+### Additional constraints:
+
+1) Your ALU instructions will be comparable in complexity to those in ARM.
+
+2) Your data memory will have only one address pointer input port, for both input and output. Please use the data memory module provided in the starter code. 
+
+3) Your register file will have no more than two output ports and one input port. You may use separate pointers for reads and writes, if you wish. Please use the register file module provided in the starter code.
+
+4) You may use lookup tables (LUTs) / decoders, but these are limited to 32 elements each (i.e., address pointer width up to 5 bits). We do not allow something like a 512-element LUT with 32-bit outputs which simply maps your restricted 9-bit machine code field to a 32-bit clone of ARM or MIPS instructions. (It was "cute" the first time a team did this.)
 
