@@ -1,5 +1,4 @@
 pad_init = is always 0x20
-preamble_length = data_mem[61]  //useless
 cipher = data_mem[64-127] 
 
 // find LFSR_init
