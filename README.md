@@ -14,7 +14,7 @@ Design an instruction set and overall architecture (ISA) for a special-purpose r
     - All internal data paths and storage will be 8 bits wide 
     - Conventional main memory of 256 bytes (8-bit address pointer)
 - Your desgin should be optimized for three simple programs.
-  - Program 1: Encrypter. Encrypt the message provided by users using a 7 bits Linear feedback shift registers (LFSR). Check [my note abou LFSR here](img/mynote_LFsR.png).
+  - Program 1: Encrypter. Encrypt the message provided by users using a 7 bits Linear feedback shift registers (LFSR). Check [my note about LFSR here](img/mynote_LFSR.png).
   - Program 2: Decrypter. By examining the first 15 bytes of the message, figure out the seend (initial value) of the LFSR and its feedback pattern. Then decrypt the encrypted message. 
   - Program 3: Error Detection. Make use of the parity bit to detect error existence. 
 
