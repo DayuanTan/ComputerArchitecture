@@ -34,3 +34,10 @@ Design an instruction set and overall architecture (ISA) for a special-purpose r
 
 ## Step 1: Implement these 3 programs using common assembly language, like MIPS/ARM.
 
+[pseudocode_program1](doc/pseudocode_program1.txt)
+
+[pseudocode_program2](doc/pseudocode_program2.txt)
+
+[pseudocode_program3](doc/pseudocode_program3.txt)
+
+
