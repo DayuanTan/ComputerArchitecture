@@ -23,10 +23,14 @@ Design an instruction set and overall architecture (ISA) for a special-purpose r
   - Translate the assemble program writing in my designed ISA to machine code according to my designed hardware.
 
 
-# Overall steps:
+# My overall steps:
 1. Implement these 3 programs using common assembly language, like MIPS/ARM.
 2. Count how many operations/instructions are needed.
 3. Classify those operations/instructions: S type, R-R type, I-R type, Mem type, BI type and Independent type. 
 4. Design instructions format, how to split 9 bits, ISA (instructions set architecture).
 5. Rewrite 3 programs using our designed instructions in step 4, replace those instructions in step 1.
 6. Design hardware, including datapath, control signals.
+
+
+## Step 1: Implement these 3 programs using common assembly language, like MIPS/ARM.
+
