@@ -56,32 +56,10 @@ Design an instruction set and overall architecture (ISA) for a special-purpose r
 |8|111 1011|
 ||
 
-###  Registers
-
-Index 
-Contents
-0
-110 0000
-1
-100 1000
-2
-111 1000
-3
-111 0010
-4
-110 1010
-5
-110 1001
-6
-101 1100
-7
-111 1110
-8
-111 1011
 
 
 
-Registers (4 bits)  (no change):
+### Registers (4 bits):
 
 |Register name|Binary|Purpose|
 |-|-|-|
