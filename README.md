@@ -93,7 +93,7 @@ Design an instruction set and overall architecture (ISA) for a special-purpose r
 |R-R type (Two operators are Register and Register)|They have 2 operators. Use 2 instructions together to finish one operation.<br />The first operator is always a register.<br />The second  operator is always a register.|All others|
 |I-R type  (Two operators are Immediate number and Register)|They have 2 operators. Use 2 instructions together to finish one operation.<br />The first operator is always an immediate number.<br />The second  operator is always a register.|MOVI, ADDI, SUBI|
 |Mem type|They have 2 operators. Use 2 instructions together to finish one operation.<br />Need data_mem.|LOADB, STOREB|
-|BI type (Branch with imme type)They have 2 operators. Use 2 instructions together to finish one operation. <br />But the first operator is a register and the second operator is an immediate number.|BNZI, BZI, BLEZI|
+|BI type (Branch with imme type)|They have 2 operators. Use 2 instructions together to finish one operation. <br />But the first operator is a register and the second operator is an immediate number.|BNZI, BZI, BLEZI|
 |Independent Type|1 instruction can finish one operation.|J, JI, LUT|
 ||
 
