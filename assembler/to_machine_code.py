@@ -1,4 +1,10 @@
-# 直接用汇编生成伪代码，改输入输出文件就行
+# please change the  filename and output_filename
+#filename="program1.txt"
+#output_filename="program1.bin"
+#filename="program2.txt"
+#output_filename="program2.bin"
+#filename="program3_1.txt"
+#output_filename="program3_1.bin"
 filename="program3_2.txt"
 output_filename="program3_2.bin"
 with open(filename, 'r') as f:
