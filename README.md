@@ -101,6 +101,35 @@ Design an instruction set and overall architecture (ISA) for a special-purpose r
 
 
 
+### Instructions Table
+
+|Instruction|Opcode|Type|Example|Meaning|
+|-|-|-|-|-|
+|OPTR|0 0001｜S｜OPTR r1<br/>ADD r2 ｜This instruction indicates which register will be used as the first operator for the next instruction. It should be very carefully used before branching.<br/>The example means r2=r1+r2.|
+|OPTR_imm|11000|S|OPTR_imm 3<br/>ADDI	r0|This instruction indicates which immediate number will be used as the first operator for the next instruction.<br/>The example means r0=3+r0.|
+|MOV 	|0 0010|R-R|OPTR	r0<br/>MOV 	r1|r1=r0. Copy the value of r0 to r1.|
+|ADD|0 0011|R-R|OPTR	r0<vr/>ADD	r1|r1 = r0 + r1. |
+|SUB|0 0100|R-R|OPTR	r0<br/>SUB	r1|r1 = r0 - r1. |
+|DIV|0 0101|R-R|OPTR	r0<br/>DIV	r1|r1=r0/r1. Divide r0 using r1 and store the remainder into r1. |
+|AND|0 0110|R-R|OPTR	r0<br/>AND	r1|r1 = r0 AND r1. The result of 0111 1111 AND 1010 0101 is 0010 0101.|
+|OR|0 0111|R-R|OPTR	r0<br/>OR	r1|r1 = r0 OR r1. The result of 0111 1111 OR 1010 0101 is 1111 1111.|
+|XOR|0 1000|R-R|OPTR	r0<br/>XOR	r1|r1 = r0 bitwise XOR r1. The result of 0111 1111 XOR 1010 0101  is 1101 1010. 0111 1111 ^ 1010 0101 = 1101 1010.|
+|XORBIT|0 1001|R-R|OPTR		r0<br/>XORBIT	r1|Reduction XOR all bits of r0 self and store the result into r1. The result of XORBIT 01010101 is 0. ^01010101 = 0.|
+|SL		|0 1010|R-R|OPTR	#imme<br/>SL	r0|shift left reg r0 with #imme bits. 0<=#imme<=15. |
+|BNZ		|0 1011|R-R|OPTR	r0<br/>BNZ	r1|Branch to the instruction address PC=PC+ r1 value  if r0!=0. |
+|BZ		|0 1100|R-R|OPTR	r0<br/>BZ	r1|Branch to the instruction address PC=PC+r1 value if r0==0. |
+|MOVI|0 1101|I-R|OPTR	#imme<br/>MOVI	r0|r0=#imme where 0<=#imme<=15. Store the immediate number into register r0.|
+|ADDI|0 1110|I-R|OPTR	#imme<br/>ADDI	r0|r0 = r0 + #imme. 0<=#imme<=15.|
+|SUBI|0 1111|I-R|OPTR	#imme<br/>SUBI	r0|r0 = r0 - #imme. 0<=#imme<=15.|
+|LOADB	|1 0000|Mem|OPTR		r0<br/>LOADB	r1|Load 1 byte from data_mem[value in r0] and store into reg r1. r1=data_mem[r0].|
+|STOREB	|1 0001|Mem|OPTR		r0<br/>STOREB	r1|Store 1 byte from reg r1 to data_mem[value in r0]. data_mem[r0]=r1. R0 value is address.|
+|BNZI		|1 0010|BI|OPTR	r0<br/>BNZI	#imme|Branch to the instruction address PC=PC+#imme if r0!=0. 0<=#imme<=15. |
+|BZI		|1 0011|BI|OPTR	r0<br/>BZI	#imme|Branch to the instruction address PC=PC+#imme if r0==0. 0<=#imme<=15. |
+|BLEZI		|1 0100|BI|OPTR	r0<br/>BLEZI	#imme|Branch to the instruction address PC=PC+#imme if r0<=0. 0<=#imme<=15. |
+|LUT		|1 0101|Inde|OPTR	r0<br/>LUT	r1		|For r0, 0 <= value of r0 <= 8, as index of  Look Up Table. Load the value of LookUpTable[value of r0] into r1.|
+|J|1 0110|Inde|J 	r0|Jump to the instruction address PC=PC+value_of_r0 directly. |
+|JI|1 0111|Inde|J 	#imme|Jump to the instruction address PC=PC+#imme directly. 0<=#imme<=15. |
+||
 
 
 
