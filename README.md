@@ -3,8 +3,6 @@ Design an instruction set and overall architecture (ISA) for a special-purpose r
 
 # Project
 
-(Credits to Prof. John Eldon)
-
 - Design the instruction set and overall architecture (ISA) for your own special-purpose reduced instruction set (RISC) processor. Including:
   - Instruction set
   - Instruction format
@@ -22,6 +20,7 @@ Design an instruction set and overall architecture (ISA) for a special-purpose r
 - Design the assembler. 
   - Translate the assemble program writing in my designed ISA to machine code according to my designed hardware.
 
+(More detials plz check out [doc/project_requirement.md](doc/project_requirement.md))
 
 # My overall steps:
 1. Implement these 3 programs using common assembly language, like MIPS/ARM.
@@ -153,7 +152,7 @@ Design an instruction set and overall architecture (ISA) for a special-purpose r
 
 [program3 machine code converted by our assembler]()
 
-# Test using SystemVerillg
+# Test using SystemVerilog
 
 
 
