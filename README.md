@@ -139,3 +139,12 @@ Design an instruction set and overall architecture (ISA) for a special-purpose r
 ![](img/DataPath_v4.png)
 
 
+## Step 6: Rewrite using our designed ISA; Convert to machine code.
+
+[program1 rewrote version using our ISA]()
+
+[program2 rewrote version using our ISA]()
+
+[program3 rewrote version using our ISA]()
+
+
