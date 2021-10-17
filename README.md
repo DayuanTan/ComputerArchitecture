@@ -141,10 +141,20 @@ Design an instruction set and overall architecture (ISA) for a special-purpose r
 
 ## Step 6: Rewrite using our designed ISA; Convert to machine code.
 
-[program1 rewrote version using our ISA]()
+[program1 assembly code rewrote version using our ISA]()
 
-[program2 rewrote version using our ISA]()
+[program2 assembly code rewrote version using our ISA]()
 
-[program3 rewrote version using our ISA]()
+[program3 assembly code rewrote version using our ISA]()
+
+[program1 machine code converted by our assembler]()
+
+[program2 machine code converted by our assembler]()
+
+[program3 machine code converted by our assembler]()
+
+# Test using SystemVerillg
+
+
 
 
