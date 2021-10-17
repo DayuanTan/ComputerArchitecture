@@ -67,12 +67,12 @@ Design an instruction set and overall architecture (ISA) for a special-purpose r
 |r1|0001|General purpose|
 |r2|0010|General purpose|
 |r3|0011|General purpose|
-|s0|0100||General purpose but usually for variables with long lifetime |
+|s0|0100|General purpose but usually for variables with long lifetime |
 |s1|0101|General purpose but usually for variables with long lifetime |
 |s2|0110|General purpose but usually for variables with long lifetime |
 |s3|0111|General purpose but usually for variables with long lifetime |
-|s4|1000||General purpose but usually for variables with long lifetime |
-|s5|1001||General purpose but usually for variables with long lifetime |
+|s4|1000|General purpose but usually for variables with long lifetime |
+|s5|1001|General purpose but usually for variables with long lifetime |
 |s6|1010|General purpose but usually for variables with long lifetime |
 |s7|1011|General purpose but usually for variables with long lifetime |
 |s8|1100|General purpose but usually for variables with long lifetime |
