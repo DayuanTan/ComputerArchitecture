@@ -132,5 +132,10 @@ Design an instruction set and overall architecture (ISA) for a special-purpose r
 |JI|1 0111|Inde|J 	#imme|Jump to the instruction address PC=PC+#imme directly. 0<=#imme<=15. |
 ||
 
+## Step 5: Design hardware
+
+### Datapath
+
+![](img/DataPath_v4.png)
 
 
