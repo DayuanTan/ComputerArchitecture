@@ -28,8 +28,9 @@ Design an instruction set and overall architecture (ISA) for a special-purpose r
 2. Count how many operations/instructions are needed.
 3. Classify those operations/instructions: S type, R-R type, I-R type, Mem type, BI type and Independent type. 
 4. Design instructions format, how to split 9 bits, ISA (instructions set architecture).
-5. Rewrite 3 programs using our designed instructions in step 4, replace those instructions in step 1.
-6. Design hardware, including datapath, control signals.
+5. Design hardware, including datapath, control signals.
+6. Rewrite 3 programs using our designed instructions in step 4, replace those instructions in step 1.
+
 
 
 ## Step 1: Implement these 3 programs using common assembly language, like MIPS/ARM.
