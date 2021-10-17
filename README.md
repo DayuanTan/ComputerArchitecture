@@ -105,7 +105,7 @@ Design an instruction set and overall architecture (ISA) for a special-purpose r
 
 |Instruction|Opcode|Type|Example|Meaning|
 |-|-|-|-|-|
-|OPTR|0 0001｜S｜OPTR r1<br/>ADD r2 ｜This instruction indicates which register will be used as the first operator for the next instruction. It should be very carefully used before branching.<br/>The example means r2=r1+r2.|
+|OPTR|0 0001|S|OPTR r1<br/>ADD r2 |This instruction indicates which register will be used as the first operator for the next instruction. It should be very carefully used before branching.<br/>The example means r2=r1+r2.|
 |OPTR_imm|1 1000|S|OPTR_imm 3<br/>ADDI	r0|This instruction indicates which immediate number will be used as the first operator for the next instruction.<br/>The example means r0=3+r0.|
 |MOV 	|0 0010|R-R|OPTR	r0<br/>MOV 	r1|r1=r0. Copy the value of r0 to r1.|
 |ADD|0 0011|R-R|OPTR	r0<vr/>ADD	r1|r1 = r0 + r1. |
