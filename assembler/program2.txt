@@ -1,0 +1,223 @@
+OPTR_imm 1  // s2=pad_init
+MOVI s2
+OPTR_imm 5
+SL s2       //s2=0x20
+OPTR_imm 1
+MOVI r1
+OPTR_imm 6
+SL r1       //r1=64
+OPTR r1
+LOADB s7    //s7=mem[64]
+OPTR_imm 1
+MOVI r1
+OPTR_imm 7
+SL r1       //r1=1000_0000
+OPTR_imm 1
+SUB r1      //r1=0111_1111
+OPTR r1
+AND s7      //s7=s7&01111111
+OPTR s2
+MOV r0
+OPTR s7
+XOR r0
+OPTR r0
+MOV s1      //s1=LFSR_init
+OPTR s1
+MOV s8      //s8=LFSR_init backup
+OPTR_imm 0
+MOVI s3     //s3=counter i=0
+OPTR s3     //*****label1*****
+LUT s0      //s0=LFSR_ptrn
+OPTR s8
+MOV s1
+OPTR s2
+MOV s5      //s5=msg_pad
+OPTR_imm 0
+MOVI s4     //s4=counter j
+OPTR s1     //*****label2*****
+MOV r1
+OPTR s5
+XOR r1      //r1=s5 XOR r1
+OPTR_imm 1
+MOV r0
+OPTR_imm 7
+SL r0
+OPTR_imm 1
+SUB r0      //r0=01111111
+OPTR r0
+AND r1      //r1 = r1&01111111
+OPTR r1
+XORBIT r2
+OPTR_imm 7
+SL r2
+OPTR r2
+OR r1       //r1=encryped msg theory
+OPTR_imm 1
+MOVI r2
+OPTR_imm 6
+SL r2       //r2=64
+OPTR s4
+ADD r2      //r2=j+64
+OPTR r2
+LOADB r2    //r2=mem[j+64]
+OPTR r1
+SUB r2      //r2=r2-r1
+OPTR_imm 1
+MOVI r3
+OPTR_imm 2
+MOVI r3
+OPTR_imm 4
+SL r3
+OPTR_imm 8
+ADDI r3
+OPTR r2
+BNZ r3      //go to label i++,r3=114-74=40
+OPTR s1     //cal next lfsr
+MOV r0      //r0=LFSR_init
+OPTR s0
+AND r0      //r0=LFSR_ptrn AND LFSR_init
+OPTR r0
+XORBIT s6
+OPTR_imm 1
+SL s1
+OPTR s6
+OR s1       //s1={s1[6:0],parity}
+OPTR_imm 1
+MOVI r0
+OPTR_imm 7
+SL r0
+OPTR_imm 1
+SUB r0
+OPTR r0
+AND s1      //s1=s1&01111111, cal end, s1 has new lfsr
+OPTR_imm 1
+ADDI s4     //j++
+OPTR_imm 10
+MOVI r0
+OPTR s4
+SUB r0
+OPTR r0
+BZI 8     //j==10, to label3(end of inner loop)
+OPTR_imm 11
+MOVI r0
+OPTR_imm 4
+SL r0
+OPTR_imm 10
+ADD r0
+J r0        //to label 2, r0=37-107=-70
+OPTR_imm 10     //label 3, check if it is the right LFSR_ptrn
+MOVI r0
+OPTR s4
+SUB r0
+OPTR r0
+BZI 15       //to end of outer loop,113->128
+OPTR_imm 1      //*****label i++*****
+ADDI s3     
+OPTR_imm 9
+MOVI r1
+OPTR s3
+SUB r1
+BZI 8     //to end of outer loop,119->127
+OPTR_imm 9
+MOVI r0
+OPTR_imm 4
+SL r0
+OPTR_imm 14
+ADDI r0
+J r0        //to label1,r0=29-127=-98
+OPTR s8
+MOV s1
+OPTR_imm 0      
+MOVI s3
+OPTR s3     //label 4
+STOREB s2   //mem[0~9]=0x20
+OPTR s1     //cal next lfsr
+MOV r0      //r0=LFSR_init
+OPTR s0
+AND r0      //r0=LFSR_ptrn AND LFSR_init
+OPTR r0
+XORBIT s6
+OPTR_imm 1
+SL s1
+OPTR s6
+OR s1       //s1={s1[6:0],parity}
+OPTR_imm 1
+MOVI r0
+OPTR_imm 7
+SL r0
+OPTR_imm 1
+SUB r0
+OPTR r0
+AND s1      //s1=s1&01111111, cal end, s1 has new lfsr
+OPTR_imm 1
+ADDI s3
+OPTR_imm 10
+MOVI r0
+OPTR s3
+SUB r0
+OPTR r0
+BZI 8       //out of loop,156->164
+OPTR_imm 13
+MOVI r0
+OPTR_imm 4
+SL r0
+OPTR_imm 14
+ADDI r0
+J r0        //t0=130-164=-34
+OPTR_imm 10
+MOVI s3
+OPTR_imm 1  //label 5
+MOVI r0
+OPTR_imm 6
+SL r0       //r0=64
+OPTR r0
+MOV r2
+OPTR s3
+ADD r2      //r2=64+i
+OPTR r2
+LOADB s7    //s7=mem[64+i]
+OPTR_imm 1
+MOVI r1
+OPTR_imm 7
+SL r1
+OPTR_imm 1
+SUBI r1     //r1=01111111
+OPTR r1
+AND s7
+OPTR s1
+XOR s7
+OPTR s3
+STOREB s7
+OPTR s1     //cal next lfsr
+MOV r1      //r1=LFSR_init
+OPTR s0
+AND r1      //r1=LFSR_ptrn AND LFSR_init
+OPTR r1
+XORBIT s6
+OPTR_imm 1
+SL s1
+OPTR s6
+OR s1       //s1={s1[6:0],parity}
+OPTR_imm 1
+MOVI r1
+OPTR_imm 7
+SL r1
+OPTR_imm 1
+SUB r1
+OPTR r1
+AND s1      //s1=s1&01111111, cal end, s1 has new lfsr
+OPTR_imm 1
+ADDI s3
+OPTR r0     //r0=64
+MOV r2
+OPTR s3
+SUB r2      //r2=64-i
+OPTR r2
+BZI 8     //to end of loop 210->218
+OPTR_imm 12
+MOVI r0
+OPTR_imm 4
+SL r0
+OPTR_imm 10
+ADDI r0
+J r0        //to label 5,r0=169-223=-54

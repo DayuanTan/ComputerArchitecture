@@ -1,0 +1,75 @@
+OPTR_imm 1  // s2=pad_init
+MOVI s2
+OPTR_imm 5
+SL s2       //s2=0x20
+OPTR_imm 0
+MOVI s3
+OPTR s3     //label6
+LOADB s7
+OPTR s2
+SUB s7
+OPTR_imm 1
+MOVI r3
+OPTR_imm 4
+SL r3
+OPTR_imm 0
+ADDI r3
+OPTR s7
+BNZ r3  //out of loop, 18->34
+OPTR_imm 1
+ADDI s3
+OPTR s3
+MOV r1
+OPTR_imm 15
+SUB r1
+OPTR r1
+BZI 8      //i==15, out of loop,274->282
+OPTR_imm 14
+MOV r0
+OPTR_imm 4
+SL r0
+OPTR_imm 6
+ADDI r0
+J r0     //to label6, 33->7(-26)
+OPTR s3
+MOV s8  //save pre_len
+OPTR_imm 1
+MOVI r0
+OPTR_imm 6
+SL r0   //r0=64
+OPTR_imm 0
+MOVI s3
+OPTR s3     //label7
+MOV r1
+OPTR s8
+ADD r1      //r1=i+pre_len
+OPTR r1
+MOV r2
+OPTR r0
+SUB r2      //r2=(i+pre_len)-64
+OPTR r2
+BZI 3
+OPTR r2
+BLEZI 4     //r2<=0, 295->299
+OPTR s3
+STOREB s2
+JI 5
+OPTR r1
+LOADB s7
+OPTR s3
+STOREB s7
+OPTR_imm 1
+ADDI s3
+OPTR s3
+MOV r1
+OPTR r0
+SUB r1      //r1=i-64
+OPTR r1
+BZI 8        //out of loop
+OPTR_imm 13
+MOV r1
+OPTR_imm 4
+SL r1
+OPTR_imm 15
+ADDI r1
+J r1       //go to label7,75->42(-33)
