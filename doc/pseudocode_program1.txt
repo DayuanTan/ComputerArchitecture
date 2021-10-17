@@ -28,24 +28,24 @@ for (int i = 0; i < 64; i++){
             msg_pad (7bits) = data_mem[i - preamble_length][0:6]
     else: 
         msg_pad (7bits) = pad_init 
-//(it actually still operate with 8 bits)
+    //(it actually still operate with 8 bits)
     
-// this keep LSB 7bits of msg_pad, make MSB 1 bit to 0
+    // this keep LSB 7bits of msg_pad, make MSB 1 bit to 0
     AND 0111 1111 with msg_pad 
 
 
-//crypt
-LFSR (7bits) XOR msg_pad (7bits) -> crypt (7bits)
-XOR all 7 bits of crypt -> as parity bit (1 bit)
-crypt (7bits) together with parity bit (1 bit) as MSB -> msg_crypt w/ parity 
-Store msg_crypt w/ parity to data_mem[64+i]
+    //crypt
+    LFSR (7bits) XOR msg_pad (7bits) -> crypt (7bits)
+    XOR all 7 bits of crypt -> as parity bit (1 bit)
+    crypt (7bits) together with parity bit (1 bit) as MSB -> msg_crypt w/ parity 
+    Store msg_crypt w/ parity to data_mem[64+i]
 
-//cal next LFSR
-AND LFSR (7bits) with LFSR pattern (7bits) -> result1
-XOR all bits of result1 -> LSB bit of next LFSR (as feedback value, 1 bit)
-LEFT SHIFT 1 bits of LFSR -> LS result (6bits)
-LS result (6bits) together with feedback -> next LFSR (7bits) //actual use OR
-LFSR (7bits) <= next LFSR (7bits)
+    //cal next LFSR
+    AND LFSR (7bits) with LFSR pattern (7bits) -> result1
+    XOR all bits of result1 -> LSB bit of next LFSR (as feedback value, 1 bit)
+    LEFT SHIFT 1 bits of LFSR -> LS result (6bits)
+    LS result (6bits) together with feedback -> next LFSR (7bits) //actual use OR
+    LFSR (7bits) <= next LFSR (7bits)
 }
 
 
