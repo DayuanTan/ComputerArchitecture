@@ -134,7 +134,7 @@ Design an instruction set and overall architecture (ISA) for a special-purpose r
 
 ## Step 5: Design hardware
 
-### Hardware 
+### Hardware, Datapath, Control Signal
 
 ![](img/DataPath_v4.png)
 
