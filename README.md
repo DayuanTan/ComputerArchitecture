@@ -155,6 +155,25 @@ Design an instruction set and overall architecture (ISA) for a special-purpose r
 
 [Datapath and control signal example 9 r1=LUT[r0]](datapath/datapath_example9.pdf)
 
+
+### Hardware system verilog code
+
+[Top Level](systemverilog/top_level.sv)
+[Next PC Logic](systemverilog/next_PC_logic.sv)
+[Instruction Mem](systemverilog/InstROM.sv)
+[Register](systemverilog/reg_file.sv)
+[ALU](systemverilog/ALU.sv)
+[Sign Extend](systemverilog/sign_extend.sv)
+[Data Memory](systemverilog/DataMem.sv)
+[DeMUX](systemverilog/demux.sv)
+[LookUpTable](systemverilog/LUT.sv)
+[Control Unit](systemverilog/control_unit.sv)
+
+
+
+
+
+
 ## Step 6: Rewrite using our designed ISA; Convert to machine code.
 
 [program1 assembly code rewrote version using our ISA](assembler/program1.txt)
