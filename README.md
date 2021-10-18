@@ -202,10 +202,10 @@ Design an instruction set and overall architecture (ISA) for a special-purpose r
 
 ## Testbench
 
-[program 1 testbench]((testbench/program1_tb1.sv)
+[program 1 testbench](testbench/program1_tb1.sv)
 
-[program 2 testbench]((testbench/program2_tb.sv)
+[program 2 testbench](testbench/program2_tb.sv)
 
-[program 3 testbench]((testbench/program3_tb_revised.sv)
+[program 3 testbench](testbench/program3_tb_revised.sv)
 
 
