@@ -137,6 +137,23 @@ Design an instruction set and overall architecture (ISA) for a special-purpose r
 
 ![](img/DataPath_v4.png)
 
+[Datapath and control signal example 1 ADD r1=r0+r1](datapath/datapath_example1.pdf)
+
+[Datapath and control signal example 2 ADDI r0=3+r0](datapath/datapath_example2.pdf)
+
+[Datapath and control signal example 3 LOADB r1=date_mem[r0]](datapath/datapath_example3.pdf)
+
+[Datapath and control signal example 4 STOREB data_mem[r0]=reg r1](datapath/datapath_example4.pdf)
+
+[Datapath and control signal example 5 BNZ pc=pc+r1](datapath/datapath_example5.pdf)
+
+[Datapath and control signal example 6 BZI pc=pc+3](datapath/datapath_example6.pdf)
+
+[Datapath and control signal example 7 J r0](datapath/datapath_example7.pdf)
+
+[Datapath and control signal example 8 JI 3](datapath/datapath_example8.pdf)
+
+[Datapath and control signal example 9 r1=LUT[r0]](datapath/datapath_example9.pdf)
 
 ## Step 6: Rewrite using our designed ISA; Convert to machine code.
 
