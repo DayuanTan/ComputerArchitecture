@@ -144,13 +144,13 @@ Design an instruction set and overall architecture (ISA) for a special-purpose r
 
 [program2 assembly code rewrote version using our ISA](assembler/program2.txt)
 
-[program3 assembly code rewrote version using our ISA](assembler/program3)
+[program3 assembly code rewrote version using our ISA](assembler/)
 
 [program1 machine code converted by our assembler](assembler/program1.bin)
 
 [program2 machine code converted by our assembler](assembler/program2.bin)
 
-[program3 machine code converted by our assembler](assembler/program3)
+[program3 machine code converted by our assembler](assembler/)
 
 # Test using SystemVerilog
 
