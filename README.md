@@ -159,14 +159,23 @@ Design an instruction set and overall architecture (ISA) for a special-purpose r
 ### Hardware system verilog code
 
 [Top Level](systemverilog/top_level.sv)
+
 [Next PC Logic](systemverilog/next_PC_logic.sv)
+
 [Instruction Mem](systemverilog/InstROM.sv)
+
 [Register](systemverilog/reg_file.sv)
+
 [ALU](systemverilog/ALU.sv)
+
 [Sign Extend](systemverilog/sign_extend.sv)
+
 [Data Memory](systemverilog/DataMem.sv)
+
 [DeMUX](systemverilog/demux.sv)
+
 [LookUpTable](systemverilog/LUT.sv)
+
 [Control Unit](systemverilog/control_unit.sv)
 
 
@@ -188,8 +197,15 @@ Design an instruction set and overall architecture (ISA) for a special-purpose r
 
 [program3 machine code converted by our assembler](assembler/)
 
+
 # Test using SystemVerilog
 
+## Testbench
 
+[program 1 testbench]((testbench/program1_tb1.sv)
+
+[program 2 testbench]((testbench/program2_tb.sv)
+
+[program 3 testbench]((testbench/program3_tb_revised.sv)
 
 
