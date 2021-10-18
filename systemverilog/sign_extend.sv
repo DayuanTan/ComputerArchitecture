@@ -3,7 +3,7 @@
 // Company: 
 // Engineer: 
 // 
-// Create Date: 2021/09/03 21:36:58
+// Create Date: 
 // Design Name: 
 // Module Name: sign_extend
 // Project Name: 

@@ -1,8 +1,8 @@
 `timescale 1ns / 1ps
-// Create Date:    15:50:22 10/02/2016 
+// Create Date:    
 // Design Name: 
 // Module Name:    InstROM 
-// Project Name:   CSE141L
+// Project Name:   
 // Tool versions: 
 // Description: Verilog module -- instruction ROM template	
 //	 preprogrammed with instruction values (see case statement)

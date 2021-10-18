@@ -1,9 +1,9 @@
 `timescale 1ns / 1ps
-// Create Date:    2017.01.25
+// Create Date:   
 // Design Name:
 // Module Name:    DataMem
 // single address pointer for both read and write
-// CSE141L
+// 
 module DataMem(
   input              Clk,
                      Reset,
