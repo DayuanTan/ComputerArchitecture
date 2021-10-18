@@ -198,7 +198,7 @@ Design an instruction set and overall architecture (ISA) for a special-purpose r
 [program3 machine code converted by our assembler](assembler/)
 
 
-# Test using SystemVerilog
+# Test using Quartus (ModelSim)
 
 ## Testbench
 
