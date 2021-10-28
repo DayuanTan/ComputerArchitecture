@@ -178,7 +178,7 @@ Design an instruction set and overall architecture (ISA) for a special-purpose r
 
 [Control Unit](systemverilog/control_unit.sv)
 
-
+![](img/1.png)
 
 
 
@@ -213,6 +213,8 @@ Design an instruction set and overall architecture (ISA) for a special-purpose r
 [program 2 testbench log](testbench_log/program2_log.txt)
 
 [program 3 testbench log](testbench_log/program3_log.txt)
+
+![](img/2.png)
 
 Also a video is provided to show how to run the testbench using Quartus (ModelSim) and what the results are:
 https://www.youtube.com/watch?v=kgZ-W7jbt24
