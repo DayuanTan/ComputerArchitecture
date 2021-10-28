@@ -216,6 +216,8 @@ Design an instruction set and overall architecture (ISA) for a special-purpose r
 
 ![](img/2.png)
 
+![](img/archi4.png)
+
 Also a video is provided to show how to run the testbench using Quartus (ModelSim) and what the results are:
 https://www.youtube.com/watch?v=kgZ-W7jbt24
 
